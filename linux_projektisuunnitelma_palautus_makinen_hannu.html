@@ -1,0 +1,858 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Ohje harjoitustöiden laatimiseen HAAGA-HELIAssa (alle 5-sivuiset tekstit)</title>
+	<meta name="generator" content="LibreOffice 4.4.6.3 (Linux)"/>
+	<meta name="author" content="Sirke Lohtaja"/>
+	<meta name="created" content="2014-08-22T15:40:00"/>
+	<meta name="changed" content="2016-03-31T05:51:27.579154000"/>
+	<meta name="ContentTypeId" content="0x010100B3D1142E92F8814282F1F85123D62024"/>
+	<meta name="Julkaistu" content="2011-12-13T00:00:00Z"/>
+	<meta name="Order" content="100.000000000000"/>
+	<meta name="PublishingExpirationDate" content=""/>
+	<meta name="PublishingStartDate" content=""/>
+	<meta name="TemplateUrl" content=""/>
+	<meta name="display_urn:schemas-microsoft-com:office:office#Author" content="Huovinen Suvi"/>
+	<meta name="display_urn:schemas-microsoft-com:office:office#Editor" content="Huovinen Suvi"/>
+	<meta name="xd_ProgID" content=""/>
+	<meta name="xd_Signature" content=""/>
+	<style type="text/css">
+		@page { margin-right: 1.5cm }
+		p { margin-left: 4.6cm; text-indent: -4.6cm; margin-bottom: 0.25cm; direction: ltr; color: #000000; line-height: 120%; orphans: 2; widows: 2 }
+		p.western { font-family: "Garamond", serif; font-size: 12pt; so-language: fi-FI }
+		p.cjk { font-family: "Times New Roman", serif; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Garamond", serif; font-size: 11pt; so-language: ar-SA }
+		td p { margin-left: 4.6cm; text-indent: -4.6cm; margin-bottom: 0cm; direction: ltr; color: #000000; orphans: 2; widows: 2 }
+		td p.western { font-family: "Garamond", serif; font-size: 12pt; so-language: fi-FI }
+		td p.cjk { font-family: "Times New Roman", serif; font-size: 12pt; so-language: zh-CN }
+		td p.ctl { font-family: "Garamond", serif; font-size: 11pt; so-language: ar-SA }
+	</style>
+</head>
+<body lang="fi-FI" text="#000000" dir="ltr">
+<div title="header">
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><b>Hannu
+	Mäkinen</b></font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">			</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><b>Raportti			</b></font></font><font size="2" style="font-size: 11pt"><sdfield type=PAGE subtype=RANDOM format=PAGE>6</sdfield></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">
+	(</font></font><font size="2" style="font-size: 11pt"><sdfield type=DOCSTAT subtype=PAGE format=ARABIC>6</sdfield></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">)</font></font></p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">			</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><b>			</b></font></font></p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">			</font></font></p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">			30.3.2016</font></font></p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+	</p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+	</p>
+	<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+	</p>
+</div>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><b>Projektisuunnitelma</b></font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Tämä
+dokumentti on Haaga-Helian Linux projekti -opintojakson
+projektisuunnitelma. Projektissa otetaan käyttöön
+Git-versionhallintaohjelmistoon pohjautuva Go Git Service (Gogs)
+-palvelu. Projektin tarkoitus on havainnollistaa, kuinka
+Git-pohjaisia palveluita luodaan ja ylläpidetään itsenäisesti.
+Tässä yhteydessä komponenttien käyttöönotolla tarkoitetaan
+niiden asennuksen jälkeen tehtäviä asetusmäärittelyitä.
+Seuraavalla sivulla olevaan taulukkoon on kirjattu projektin alustava
+aikataulu, eli sen työvaiheet ja niiden toteuttamisajankohdat.
+Projektin aikataulu mukailee Linux projekti -opintojakson aikataulua,
+joten sen on määrä olla valmis kyseisellä opintojaksolla
+järjestettävään projektien esittelytilaisuuteen mennessä.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Tämä
+dokumentti on alustava suunnitelma projektin kulusta, joten siihen
+kirjatut yksityiskohdat kuten päivämäärät saattavat poiketa
+todellisista päivämääristä. Lisäksi projektista tehdään
+erillinen vaihe vaiheelta -tyyppinen ohjeistusdokumentti, jossa
+kerrotaan yksityiskohtaisesti, mitä kussakin työvaiheessa on tehty
+ja miten syntynyt lopputulos on saatu aikaiseksi.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	</font></font></p>
+<table width="662" cellpadding="4" cellspacing="0">
+	<col width="211">
+	<col width="212">
+	<col width="212">
+	<tr valign="top">
+		<td width="211" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">työvaihe</p>
+		</td>
+		<td width="212" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">toteuttamisviikko</p>
+		</td>
+		<td width="212" style="border: 1px solid #000000; padding: 0.1cm">
+			<p class="western">toteuttamispäivämäärä</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">projektisuunnitelman</p>
+			<p class="western" style="margin-left: 0cm; text-indent: 0cm">laadinta
+			ja palautus</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">13</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">30.3.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">projektin loppuraportin</p>
+			<p class="western">pohjadokumentin</p>
+			<p class="western">laadinta ja täydentäminen</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">13</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">30.3.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">mysql-tietokannan</p>
+			<p class="western">asennus ja käyttöönotto</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">13</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">30.3.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" height="20" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western" style="margin-left: 0cm; text-indent: 0cm">go-ohjelmointikielen
+			asennus ja käyttöönotto</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western" style="margin-left: 0cm; text-indent: 0cm">13</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">30.3.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">gogs-palvelun asennus ja</p>
+			<p class="western">käynnistäminen</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">14</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">4.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">supervisor-hallinta-</p>
+			<p class="western">työkalun asennus ja</p>
+			<p class="western">käyttöönotto</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">14</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">4.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">välityspalvelimen</p>
+			<p class="western">asennus ja käyttöön-</p>
+			<p class="western">otto</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">14</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western" style="margin-left: 0cm; text-indent: 0cm">5.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">gogs-palvelun alku-</p>
+			<p class="western">asetusten määrittäminen</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">14</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">6.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">gogs-palvelun testaus</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">15</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">11.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">projektin toimeksiantajan</p>
+			<p class="western">mielipiteiden tiedustelu</p>
+			<p class="western">siitä ja hänen toimenpide-</p>
+			<p class="western">ehdotustensa</p>
+			<p class="western">toteuttaminen</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">16</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">19.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">lisäominaisuuksien</p>
+			<p class="western">asentaminen ja käyttöön-</p>
+			<p class="western">otto Gogs-palvelussa</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">16</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">20.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">projektin viimeistely ja</p>
+			<p class="western">esityksen laadinta</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">16</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">26.4.2016</p>
+		</td>
+	</tr>
+	<tr valign="top">
+		<td width="211" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">Projektin esittely</p>
+			<p class="western">siitä tehdyn esityksen</p>
+			<p class="western">pohjalta</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<p class="western">17</p>
+		</td>
+		<td width="212" style="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<p class="western">3.5.2016</p>
+		</td>
+	</tr>
+</table>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Kaikki
+HAAGA-HELIAn opiskelijat asettelevat tekstinsä tietyllä tavalla.
+Sen ansiosta sinun ei tarvitse käyttää aikaasi ulkoasusta
+huolehtimiseen, vaan voit suunnata kaiken energiasi tekstin
+sisältöön. </font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt"><br/>
+<br/>
+</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Asetteluvaihtoehtoja
+on kaksi. Jos teet raportin tai pitkän suunnitelman, käytä
+</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">raporttiohjetta</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">.
+Jos teet lyhyen suunnitelman taikka muistion, tiivistelmän,
+tiedotteen tai jonkin muun harjoitustyön, käytä
+</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">harjoitustyöohjetta</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">
+eli tätä ohjetta.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Tämä
+ohje koskee HAAGA-HELIAn kaikkien koulutusalojen perus- ja
+jatkotutkinto-opiskelijoita. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Asettele
+harjoitustyöt näin</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	</font></font></p>
+<p class="western" style="margin-left: 0cm; text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Tämä
+tiedosto on aseteltu harjoitustyön tapaan, joten käytä tätä
+työsi pohjana. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Harjoitustöiden
+asettelu noudattaa vakioasettelua eli suomalaista asiakirjastandardia
+(SFS 2487). Harjoitustöiden ulkoasu on sama kuin tämän ohjeen eli
+seuraava:</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">ylämarginaali
+	1 cm, alamarginaali 1 cm</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">vasen
+	marginaali 2 cm, oikea marginaali 1,5 cm</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">ylätunnisteen
+	etäisyys tiedoston sivun yläreunasta 1 cm</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">pääotsikon
+	ja muiden otsikoiden kirjasin Arial 11 pt pienaakkosin ja pääotsikko
+	lihavoituna </font></font>
+	</p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">tekstin
+	kirjasin Arial 11 pt</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">pääotsikon
+	alle 1 tyhjä rivi</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">riviväli
+	1.</font></font></p>
+</ul>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Aseta
+marginaalit 2,3 cm:n välein. Aloita otsikot vasemmasta marginaalista
+ja teksti 4,6 cm vasemmasta marginaalista.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tunnistetiedot</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Merkitse
+tekijän nimi ja asiakirjan tunnistamiseen liittyvät tiedot
+ylätunnisteeseen. Kirjaa ylätunnisteen sisältämät tiedot
+Internetin hakukoneita varten myös kohtaan Tiedosto &gt;
+Ominaisuudet. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tee
+ylätunniste niin, että sen sisältämät tiedot näkyvät
+jokaisella sivulla. Lisää työn valmistumispäivän jälkeen kolme
+tyhjää riviä, jotta pääotsikko ja seuraavan sivun teksti alkaa
+aina samasta kohdasta, 4,3 cm sivun yläreunasta ja vasemmasta
+marginaalista. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	</font></font></p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Merkitse
+ylätunnisteeseen seuraavat tiedot: </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<ul>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">työn
+	laatijan nimi tai laatijoiden nimet: etunimi ennen sukunimeä,
+	sukunimen alkukirjaimen mukaan aakkostettuna allekkain, ensimmäinen
+	nimi heti ylämarginaalin jälkeen 2 cm tiedoston vasemmasta
+	reunasta </font></font>
+	</p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">tekstilaji
+	eli sana harjoitustyö, referaatti, muistio tms: isolla
+	alkukirjaimella pienaakkosin lihavoituna, työn ensimmäisen
+	laatijan nimen jälkeen, heti ylämarginaalin alle, 9,2 cm tiedoston
+	vasemmasta marginaalista</font></font></p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">koulun
+	nimi HAAGA-HELIA ammattikorkeakoulu: työn viimeisen laatijan nimen
+	alle </font></font>
+	</p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">opintojakson
+	tunnus: koulun nimen alle </font></font>
+	</p>
+	<li/>
+<p style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">työn
+	valmistumisen päivämäärä: neljännelle riville
+	ylämarginaalista, 9,2 cm tiedoston vasemmasta marginaalista.</font></font></p>
+</ul>
+<p style="margin-left: 5.1cm; text-indent: -0.5cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tasaa
+vasen reuna ja anna oikean liehua</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Lisää
+pääotsikon jälkeen yksi tyhjä rivi ja aloita tekstin
+kirjoittaminen. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Aloita
+teksti 4,6 cm päästä vasemmasta marginaalista. K</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">äytä
+oikeassa reunassa liehureunaa. </font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Kirjoita
+teksti yhteen palstaan ja j</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">aa
+teksti kappaleisiin ylimääräisellä rivinvaihdolla</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">.
+Aloita uusi kappale aina, kun siirryt uuteen asiaan. Käytä
+typografisia tehokeinoja eli kursivointia ja lihavointia harkiten,
+jotta ne säilyttävät tehonsa. Älä alleviivaa tekstiä.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Otsikoi
+osuvasti	Käytä pääotsikoiden lisäksi sivuotsikoita, jotta
+tekstiä on helppo silmäillä. Tee ensimmäinen sivuotsikko vasta
+kun olet ensin kirjoittanut ainakin yhden kappaleen. Aloita otsikot
+vasemmasta marginaalista ja tee niistä enintään yhden rivin
+mittaisia. Kirjoita jokaisen otsikon yhteyteen tekstiä. Numeroi
+otsikot, jos numerointi selkeyttää asiaasi. </font></font>
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Jos
+sivuotsikko on niin lyhyt, että se mahtuu tekstin vasemmalla
+puolella olevaan tyhjään tilaan, aloita teksti samalta riviltä
+kuin otsikko. Jos otsikko on niin pitkä, että se ulottuu tekstin
+alkamiskohtaan, tee otsikon jälkeen yksi ylimääräinen
+rivinvaihto.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tekstilaji
+vaikuttaa rakenteeseen ja sisältöön</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tekstilaji
+vaikuttaa harjoitustyön rakenteeseen eli siihen, missä
+järjestyksessä esität asiasi. Tekstin rakenne on kuitenkin aina
+johdonmukainen. Kirjoita harjoitustyö aina asiatyylillä eli
+kirjoita ymmärrettävästi, tiiviisti ja kieliopillisesti oikein.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Käytä
+lähteitä harjoitustyössäkin	</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Käytät
+usein lähteitä harjoitustöissäkin. Lähdeviittauksista ja
+lähdeluettelosta lukija voi tarkastaa, mistä esitellyt tiedot on
+saatu. Lisäksi hän pystyy tietojen avulla arvioimaan työn laatua
+ja luotettavuutta. Tavallisimmin käytettyjä lähteitä ovat
+tutkimukset, kirjat, artikkelit, haastattelut, Internet,
+asiantuntijaseminaarien luennot sekä yritysten, yhteisöjen tai
+julkisen sektorin tuottamat raportit ja muut dokumentit sekä
+haastattelut. </font></font>
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Merkitse
+kaikki käyttämäsi lähteet sekä tekstiin että työn loppuun
+tulevaan lähdeluetteloon. Lähteiden ja lähdeluettelon
+merkintäkäytännöt löytyvät pitkien raporttien ohjeesta. </font></font>
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Merkitse
+työsi viimeiseksi sivuotsikoksi Lähteet. Listaa sen alle käyttämäsi
+lähteet. Aakkosta lähteet lähteen ensimmäisen sanan alkukirjaimen
+mukaan. Älä erottele painettuja ja painamattomia lähteitä. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Lisätietoja
+lähdeluettelon ja lähdeviitteiden laatimisesta saat opinnäytetöiden
+ja muiden raporttien laatimisesta kertovista ohjeista, jotka löydät
+verkkosivuilta.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Liitteet</font></font><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">	Työssäsi
+saattaa olla liitteitä. Sijoita liitteiksi kaikki sellainen aines,
+johon joudut viittaamaan tekstissä, mutta jota ei tarvitse esittää
+tekstissä sellaisenaan. </font></font>
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Liitteitä
+voivat olla esimerkiksi aineiston hankkimiseksi käytetty
+kyselylomake ja sen saate, asiakirja, sopimus, suuri taulukko tai
+kuvio. Liitteet eivät saa olla raportin irrallisia lisiä, vaan
+jokaiseen liitteeseen on viitattava tekstissä. </font></font>
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Jos
+työssäsi on liitteitä, merkitse työsi viimeiseksi sivuotsikoksi
+Liite tai Liitteet. Otsikko tulee Lähteet-otsikon jälkeen. Numeroi
+ja otsikoi liitteet ja listaa ne Liite- tai Liitteet-sivuotsikon
+viereen allekkain 4,6 cm tiedoston vasemmasta marginaalista näin:</font></font></p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Liite
+1. Otsikko</font></font></p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Liite
+2. Otsikko</font></font></p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Liitä
+liitteet työsi loppuun niin, että jokainen niistä sijaitsee omalla
+sivullaan.</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">Tutustu
+myös muihin ohjeisiin</font></font></p>
+<p class="western" style="margin-bottom: 0cm; line-height: 100%"><br/>
+
+</p>
+<p class="western" style="text-indent: 0cm; margin-bottom: 0cm; line-height: 100%">
+<font face="Arial, sans-serif"><font size="2" style="font-size: 11pt">MyNetissä
+on myös muita ohjeita, jotka auttavat sinua ilmaisemaan ajatuksesi
+kirjallisesti. Tutustu niihin. Niistä näet, miten laadit
+opinnäytetyöt ja muut raportit. Ohjeista selviää myös, miten
+käytät Word-ohjelmaa ja lähteitä harjoitustöitä ja raportteja
+laatiessasi.</font></font></p>
+</body>
+</html>
