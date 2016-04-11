@@ -2,8 +2,9 @@
 
 Tämä dokumentti on Haaga-Helian Linux projekti -opintojakson projekti-
 suunnitelma. Projektissa otetaan käyttöön Git-versionhallintaohjelmistoon 
-pohjautuva Go Git Service (Gogs) -palvelu. Projektin tarkoitus on havain-
-nollistaa, kuinka Git-pohjaisia palveluita luodaan ja ylläpidetään itsenäises-
+pohjautuva Go Git Service (Gogs) -palvelu. 
+
+Projektin tarkoitus on havainnollistaa, kuinka Git-pohjaisia palveluita luodaan ja ylläpidetään itsenäises-
 ti. Tässä yhteydessä komponenttien käyttöönotolla tarkoitetaan niiden 
 asennuksen jälkeen tehtäviä asetusmäärittelyitä. Seuraavalla sivulla ole-
 vaan taulukkoon on kirjattu projektin alustava aikataulu, eli sen työvaiheet 
