@@ -1,4 +1,4 @@
-Projektisuunnitelma
+#Projektisuunnitelma
 
 Tämä dokumentti on Haaga-Helian Linux projekti -opintojakson projekti-
 suunnitelma. Projektissa otetaan käyttöön Git-versionhallintaohjelmistoon 
