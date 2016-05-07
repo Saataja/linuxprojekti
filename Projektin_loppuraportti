@@ -1,5 +1,0 @@
-##Gogs-palvelun asentaminen ja käyttöönotto
-
-Tämä dokumentti on Haaga-Helian Linux projekti -opintojaksolla tehtävän projektin loppuraportti. Siinä kuvataan Gogs-palvelun (Go Git Service) asennus ja käyttöönotto vaihe vaiheelta -tyyppisesti.
-
-Gogs (Go Git Service) on Git-versionhallintaohjelmistoon pohjautuva palvelu, jota sen käyttäjä ylläpitää itsenäisesti.
