@@ -1,8 +1,15 @@
 #Projektin loppuraportti
 
-Tämä dokumentti on Haaga-Helian Linux projekti -opintojaksolla tehtävän projektin loppuraportti. Siinä kuvataan Gogs-palvelun (Go Git Service) asennus ja käyttöönotto vaihe vaiheelta -tyyppisesti Linux Ubuntu 16.04 -käyttöjärjestelmässä.
+Tämä dokumentti on Haaga-Helian Linux projekti -opintojaksolla tehtävän projektin loppuraportti. Siinä kuvataan Gogs-työkalun (Go Git Service) asennus ja käyttöönotto vaihe vaiheelta -tyyppisesti Linux Ubuntu 16.04 -käyttöjärjestelmässä.
 
-Gogs (Go Git Service) on työkalu Git-versionhallintaohjelmistoon pohjautuvien palveluiden itsenäiseen ylläpitoon. Työkalu on tehty Go-ohjelmointikielellä ja se voidaan asentaa ja ottaa käyttöön kaikissa tunnetummissa käyttöjärjestelmissä kuten Windowsissa, Linuxissa ja MAC OS X:ssä.
+Gogs (Go Git Service) on Git-versionhallintaohjelmistoon pohjautuva versionhallintapalvelu, joka toimii verkkoselaimessa ja jota sen pääkäyttäjä ylläpitää itsenäisesti. Palvelu eroaa Git-versionhallintaohjelmistosta siinä, että sitä ylläpitävät komponentit on asennettu pääkäyttäjän tietokoneelle ja että sen saatavilla olo ja muu toiminta riippuu täysin pääkäyttäjän toimista. Tämä tarkoittaa, että jos esimerkisi pääkäyttäjän tietokone on sammuksissa, palveluun ei saada yhteyttä. Tällöin pääkäyttäjän tietokone toimii ikään kuin palvelimena Gogs-palvelulle, vaikka siihen ei varsinaisesti olisikaan asennettu palvelinkäyttöjärjestelmää.
+
+Gogs-palvelun pääkäyttäjiä ovat ne käyttäjät, jotka asentavat palvelun tietokoneelleen. Jokaisella heistä on käytössään oma yksityinen Gogs-käyttöympäristö, jota muut käyttäjät voivat alkaa käyttää vain rekisteröitymällä sen käyttäjiksi. Tiettyyn käyttöympäristöön rekisteröityneet käyttäjät voivat luoda yhteisiä tietovarastoja sekä käyttöympäristön sisällä toimivia vuorovaikutuksellisia organisaatioita. Lisäksi he voivat kopioida tietoa muista julkaisualustoista käyttämäänsä käyttöympäristöön. Edellä mainitut vuorovaikutukselliset organisaatiot ovat samantyyppisiä kuin Windows Server -palvelinkäyttöjärjestelmässä esiintyvät organisaatoyksiköt.
+
+
+
+
+
 
 ##Gogs-palvelun asennuksen ja käyttöönoton valmistelu
 
