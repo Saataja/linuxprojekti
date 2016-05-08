@@ -25,5 +25,7 @@ Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syött
 (päivittää Ubuntun pakettivaratot)
 
 2. sudo apt-get -y install git  
-(asentaa git-versionhallintaohjelmiston sisältävän paketin, johon gogs pohjautuu.
+(asentaa git-versionhallintaohjelmiston sisältävän paketin, johon gogs pohjautuu)
+
+3. 
 
