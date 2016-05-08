@@ -19,7 +19,7 @@ Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimelt�
 
 ###Gogs-palvelun asennus Päätteen avulla
 
-Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää Päätteeseen **yksi kerrallaan** ja jokaisen komennon jälkeen tulee painaa **Enter**-painiketta.
+Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää Päätteeseen järjestyksessään **yksi kerrallaan** ja jokaisen komennon jälkeen tulee painaa **Enter**-painiketta.
 
 1. sudo apt-get update  
 (päivittää Ubuntun pakettivaratot)
