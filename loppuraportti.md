@@ -1,4 +1,4 @@
-#Projektin loppuraportti - Johdanto
+#Projektin loppuraportti - johdanto
 
 Tämä dokumentti on Haaga-Helian Linux projekti -opintojaksolla tehtävän projektin loppuraportti. Siinä kuvataan Gogs-työkalun (Go Git Service) asennus ja käyttöönotto vaihe vaiheelta -tyyppisesti Linux Ubuntu 16.04 -käyttöjärjestelmässä.
 
