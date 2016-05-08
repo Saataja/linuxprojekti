@@ -22,10 +22,11 @@ Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimelt�
 Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää Päätteeseen järjestyksessään **yksi kerrallaan** ja jokaisen komennon jälkeen tulee painaa **Enter**-painiketta.
 
 1. sudo apt-get update  
-(päivittää Ubuntun pakettivaratot)
+(päivittää Ubuntun pakettivaratot. Komennon pitäisi antaa seuraavanlainen tuloste:)
 
 2. sudo apt-get -y install git  
-(asentaa git-versionhallintaohjelmiston sisältävän paketin, johon gogs pohjautuu)
+(asentaa git-versionhallintaohjelmiston sisältävän paketin, johon gogs pohjautuu. Komennon pitäisi antaa seuraavanlainen tuloste:
 
-3. 
+3. git --version  
+(tarkistaa git-versionhallintaohjelmiston versio. Komennon pitäisi antaa seuraavanlainen tuloste:
 
