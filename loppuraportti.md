@@ -26,29 +26,42 @@ painaa Enter-painiketta.
 		
 1. sudo apt-get -y update && sudo apt-get -y upgrade
 
-(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
+#####(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
 
 Komennon tulisi antaa seuraavanlainen tuloste:
 
 Tehdään asetuksia: xinit (1.3.4-3ubuntu0.1) ...
+
 Tehdään asetuksia: oxideqt-codecs:amd64 (1.14.7-0ubuntu1) ...
+
 Tehdään asetuksia: liboxideqtcore0:amd64 (1.14.7-0ubuntu1) ...
+
 Tehdään asetuksia: liboxideqtquick0:amd64 (1.14.7-0ubuntu1) ...
+
 Tehdään asetuksia: liboxideqt-qmlplugin:amd64 (1.14.7-0ubuntu1) ...
+
 Processing triggers for libc-bin (2.23-0ubuntu3) …
 
 2. seuraavaksi asennetaan git-versionhallintaohjelmiston sisältävät paketit seuraavalla komennolla:
+
 sudo apt-get -y install git
+
 komennon tulisi antaa seuraavanlainen tuloste:
+
 Processing triggers for man-db (2.7.5-1) ...
+
 Tehdään asetuksia: liberror-perl (0.17-1.2) ...
+
 Tehdään asetuksia: git-man (1:2.7.4-0ubuntu1) ...
+
 Tehdään asetuksia: git (1:2.7.4-0ubuntu1) …
 
 3. seuraavaksi tarkistetaan Git-ohjelmistopaketin versio seuraavalla komennolla:
+
 git --version
 
 komennon tulisi antaa seuraavanlainen tuloste:
+
 git version 2.7.4
 
 4. seuraavaksi ladataan Gogs-palvelun asennuspaketti alla olevan linkin takaa.
@@ -67,9 +80,13 @@ asennuksen yhteydessä järjestelmä pyytää määrittämään uuden salasanan 
 Kun Pääte antaa seuraavanlaisen tulosteen:
 
 Tehdään asetuksia: libhtml-template-perl (2.95-2) ...
+
 Tehdään asetuksia: mysql-server (5.7.12-0ubuntu1) ...
+
 Processing triggers for libc-bin (2.23-0ubuntu3) ...
+
 Processing triggers for ureadahead (0.100.0-19) ...
+
 Processing triggers for systemd (229-4ubuntu4) …
 
 
@@ -89,8 +106,7 @@ sudo systemctl status mysql
 komennon tulisi antaa seuraavanlainen tuloste:
 
 
-
-
+KUVA PUUTTUU
 
 9. seuraavaksi siirrytään seuraavaan hakemistoon:
 		/home/git/gogs 
@@ -109,11 +125,7 @@ komennon tulisi antaa seuraavanlainen tuloste:
 
 
 
-
-
-
-
-
+KUVA PUUTTUU
 
 
 
@@ -124,13 +136,14 @@ Tässä vaiheessa jätetään Pääte auki taustalle ja siirrytään käyttämä
 http://localhost:3000/install
 tämän jälkeen selainikkunassa tulisi näkyä seuraavanlainen näkymä:
 
+KUVA PUUTTUU
 
-
-
-kun yllä kuvattu Gogs-palvelun asennusikkuna on saatu avattua Firefox-selaimessa, 		jätetään se taustalle ja avataan uusi Pääte-ikkuna Ubuntun Unity-valikon kautta.
+kun yllä kuvattu Gogs-palvelun asennusikkuna on saatu avattua Firefox-selaimessa,
+jätetään se taustalle ja avataan uusi Pääte-ikkuna Ubuntun Unity-valikon kautta.
 Tässä vaiheessa näyttöruudulla tulisi olla seuraavanlainen näkymä:
 
-12. seuraavaksi varmistetaan, että Gogs-palvelu on edelleen käynnissä 				ensimmäisessä Pääte-ikkunassa ja sen jälkeen siirrytään äsken avatussa tyhjässä Pääte-ikkunassa 
+12. seuraavaksi varmistetaan, että Gogs-palvelu on edelleen käynnissä ensimmäisessä Pääte-ikkunassa 
+ja sen jälkeen siirrytään äsken avatussa tyhjässä Pääte-ikkunassa 
 seuraavaan hakemistoon: 
 
 /home/git/gogs
@@ -138,18 +151,20 @@ Se tapahtuu seuraavalla komennolla:
 
 cd /home/git/gogs
 
-13. seuraavaksi annetaan kaikille käyttäjille suoritusoikeudet seuraavaan tiedostoon: 		scripts/mysql.sql
+13. seuraavaksi annetaan kaikille käyttäjille suoritusoikeudet seuraavaan tiedostoon:*
+
+scripts/mysql.sql
+
+
 Se tapahtuu seuraavalla komennolla:
+
 sudo chmod +x scripts/mysql.sql
-yllä mainittujen komentojen syöttämisen jälkeen Päätteessä tulisi olla 				seuraavanlainen näkymä:
 
+yllä mainittujen komentojen syöttämisen jälkeen Päätteessä tulisi olla seuraavanlainen näkymä:
 
+KUVA PUUTTUU
 
-
-
-
-
-14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.  Se 		tapahtuu seuraavalla komennolla:
+14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.  Se tapahtuu seuraavalla komennolla:
 
 mysql --user=root --password=data < scripts/mysql.sql
 
@@ -157,19 +172,21 @@ komennon tulisi antaa seuraavanlainen tuloste:
 
 mysql: [Warning] Using a password on the command line interface can be insecure.
 
-Yllä olevasta varoituksesta ei tarvitse välittää. Mikäli muita varoituksia ei komennon 		syöttämisen jälkeen tullut, tietokannan luonti onnistui.
+Yllä olevasta varoituksesta ei tarvitse välittää. 
+Mikäli muita varoituksia ei komennonsyöttämisen jälkeen tullut, tietokannan luonti onnistui.
 
-15. Seuraavaksi siirrytään takaisin Firefox-selaimessa olevaan Gogs-palvelun 			asennusikkunaan ja kirjoitetaan siinä näkyvään Password-laatikkoon seuraava 			salasana:
+15. Seuraavaksi siirrytään takaisin Firefox-selaimessa olevaan Gogs-palvelun asennusikkunaan 
+ja kirjoitetaan siinä näkyvään Password-laatikkoon seuraava salasana:
 
 data
 
-16. Lopuksi siirrytään hiirellä asennusikkunan alareunaan ja klikataan siellä olevaa 		Install Gogs -painiketta.
+16. Lopuksi siirrytään hiirellä asennusikkunan alareunaan ja klikataan siellä olevaaInstall Gogs -painiketta.
 
 
 
-Gogs-palvelun käyttöönotto
+######Gogs-palvelun käyttöönotto
 
-Asennuksen jälkeen palveluun pitää rekisteröityä. Se tapahtuu klikkaamalla Login-		ikkunassa seuraavaa linkkiä: Sign up now.
+Asennuksen jälkeen palveluun pitää rekisteröityä. Se tapahtuu klikkaamalla Login-ikkunassa seuraavaa linkkiä: Sign up now.
 
 
 
