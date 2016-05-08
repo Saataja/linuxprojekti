@@ -15,13 +15,15 @@ Gogs-palvelun pääkäyttäjiä ovat ne käyttäjät, jotka asentavat palvelun t
 
 Ennen Gogs-palvelun asentamista ja käyttöönottoa asennetaan Linux Ubuntu 16.04 -käyttöjärjestelmä ja tehdään asennuksen yhteydessä siihen käyttäjä nimeltään git.
 
-Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimeltään Pääte. Se tapahtuu klikkaamalla järjestelmän oikeassa reunassa näkyvän pystypalkin ylintä kuvaketta ja kirjoittamalla avautuvaan hakukenttään seuraava termi: Pääte. Tämän jälkeen kirjoitetaan avautuvaan ikkunaan alla listatut komennot yksi kerrallaan. Jokaisen komennon kirjoittamisen jälkeen suoritetaan se painamalla Enter-painiketta. Jos järjestelmä kysyy lupaa jollekin toimenpiteelle, annetaan lupa painamalla K-kirjainta.
+Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimeltään Pääte. Se tapahtuu klikkaamalla järjestelmän oikeassa reunassa näkyvän pystypalkin ylintä kuvaketta ja kirjoittamalla avautuvaan hakukenttään seuraava termi: Pääte. Tämän jälkeen kirjoitetaan avautuvaan ikkunaan alla listatut komennot järjestyksessään yksi kerrallaan. Jokaisen komennon kirjoittamisen jälkeen suoritetaan se painamalla Enter-painiketta. Jos järjestelmä kysyy lupaa jollekin toimenpiteelle, annetaan lupa painamalla K-kirjainta.
 
-päättessen syötettävä komento                                                   Sen selite
-          
-sudo apt-get update                                                             Päivittää
+###Päätteseen syötettävät komennot
 
-sudo apt-get -y install git
+Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää Päätteeseen **Yksi kerrallaan** ja jokaisen komennon jälkeen tulee painaa **Enter**-painiketta.
 
-sudo apt-get -y install mysql-server
+1. sudo apt-get update
+(päivittää Ubuntun pakettivaratot)
+
+2. sudo apt-get -y install git
+(asentaa git-versionhallintaohjelmiston sisältävän paketin, johon gogs 
 
