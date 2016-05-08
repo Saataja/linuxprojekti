@@ -17,16 +17,15 @@ ja tehdään asennuksen yhteydessä siihen käyttäjä nimeltään git.
 
 Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimeltään Pääte. Se tapahtuu klikkaamalla järjestelmän oikeassa reunassa näkyvän pystypalkin ylintä kuvaketta ja kirjoittamalla avautuvaan hakukenttään seuraava termi: Pääte. Tämän jälkeen kirjoitetaan avautuvaan ikkunaan alla listatut komennot järjestyksessään yksi kerrallaan. Jokaisen komennon kirjoittamisen jälkeen suoritetaan se painamalla Enter-painiketta. Jos järjestelmä kysyy lupaa jollekin toimenpiteelle, annetaan lupa painamalla K-kirjainta.
 
-####Gogs-palvelun asennus Päätteen avulla
+###Gogs-palvelun asennus Päätteen avulla
 
 Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää
-
 Päätteeseen järjestyksessään yksi kerrallaan ja jokaisen komennon jälkeen tulee
 painaa Enter-painiketta.
 		
 1. sudo apt-get -y update && sudo apt-get -y upgrade
 
-#####(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
+###(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
 
 Komennon tulisi antaa seuraavanlainen tuloste:
 
@@ -89,7 +88,6 @@ Processing triggers for ureadahead (0.100.0-19) ...
 
 Processing triggers for systemd (229-4ubuntu4) …
 
-
 tietokanta on onnistuneesti asennettu.
 		
 7. seuraavaksi tarkistetaan mysql-tietokannan versio seuraavalla komennolla:
@@ -104,6 +102,8 @@ mysql  Ver 14.14 Distrib 5.7.12, for Linux (x86_64) using  EditLine wrapper
 sudo systemctl status mysql
 
 komennon tulisi antaa seuraavanlainen tuloste:
+
+
 
 
 KUVA PUUTTUU
@@ -129,7 +129,8 @@ KUVA PUUTTUU
 
 
 
-Tässä vaiheessa jätetään Pääte auki taustalle ja siirrytään käyttämään Firefox-			selainta. Seuraavilla sivuilla on tarkemmat ohjeet jatkotoimenpiteistä.
+Tässä vaiheessa jätetään Pääte auki taustalle ja siirrytään käyttämään Firefox-selainta. 
+Seuraavilla sivuilla on tarkemmat ohjeet jatkotoimenpiteistä.
 
 11. seuraavaksi avataan Firefox-selain ja siirrytään sillä seuraavaan osoitteeseen: 
 
@@ -155,7 +156,6 @@ cd /home/git/gogs
 
 scripts/mysql.sql
 
-
 Se tapahtuu seuraavalla komennolla:
 
 sudo chmod +x scripts/mysql.sql
@@ -164,7 +164,9 @@ yllä mainittujen komentojen syöttämisen jälkeen Päätteessä tulisi olla se
 
 KUVA PUUTTUU
 
-14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.  Se tapahtuu seuraavalla komennolla:
+14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.
+
+Se tapahtuu seuraavalla komennolla:
 
 mysql --user=root --password=data < scripts/mysql.sql
 
@@ -184,17 +186,14 @@ data
 
 
 
-######Gogs-palvelun käyttöönotto
+###Gogs-palvelun käyttöönotto
 
-Asennuksen jälkeen palveluun pitää rekisteröityä. Se tapahtuu klikkaamalla Login-ikkunassa seuraavaa linkkiä: Sign up now.
-
-
-
-
+Asennuksen jälkeen palveluun pitää rekisteröityä. 
+Se tapahtuu klikkaamalla Login-ikkunassa seuraavaa linkkiä: Sign up now.
 
 Tämän jälkeen syötetään omat tiedot seuraavassa ikkunassa oleviin laatikoihin alla olevan kuvan mukaisesti ja klikataan lopuksi Create an account -painiketta. Lopuksi äsken luoduilla tunnuksilla kirjaudutaan palveluun seuraavassa ikkunassa. Kirjautumisen jälkeen näyttöruudulla tulisi olla kuvan 3 mukainen näkymä.
 
-Sisällön luominen Gogs-palveluun
+###Sisällön luominen Gogs-palveluun
 
 Gogs-palvelun käyttöliittymässä on mahdollista luoda seuraavia sisältökomponentteja:
 
@@ -204,18 +203,13 @@ Gogs-palvelun käyttöliittymässä on mahdollista luoda seuraavia sisältökomp
 
 3. organisaatiot → organisaatiot ovat Gogs:in sisälle luotavia hallinnollisia toimielimiä, joille voidaan luoda omia tietovarastoja. Niitä voidaan verrata Windows Server -palvelinkäyttöjärjestelmässä esiintyviin organisaatioyksiköihin. Organisaatiot 		voidaan luokitella ja nimetä niiden tehtävän tai hallinnollisen aseman mukaan ja niihin on mahdollista lisätä ja poistaa jäseniä. Myös organisaatioiden oikeuksia voidaan muuttaa niiden tehtävän ja hallinnollisen aseman mukaan. 
 
-
-
-
-
-Tietovaraston luominen
+###Tietovaraston luominen
 
 Tietovaraston luominen tapahtuu klikkaamalla Dashboard-näkymässä näyttöruudun oikeassa yläkulmassa olevaa +-merkkiä ja valitsemalla New repository.
 
 Luodaan tietovarasto nimeltään Esimerkkivarasto ja säädetään sen asetukset alla olevan mallikuvan mukaisiksi. Language-laatikon arvoksi kannattaa aina asettaa Go ja License-laatikon arvoksi GNU General Public License v3.0. Lopuksi klikataan Create repository -painiketta.
 
 Koska esimerkkivarastoa tullaan käyttämään pohjana myöhemmin luotaville varastoille, sen kohdalla rastitetaan seuraava valintaikkuna: Initialize this repository
-
 
 Tietovaraston luomisen jälkeen näyttöruudulla tulisi näkyä kuvan 3 mukainennäkymä. Siitä voidaan päätellä, että kyseiseen tietovarastoon on varastoitu kaikki siihen liittyvä tieto.
 
