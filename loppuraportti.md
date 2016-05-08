@@ -19,15 +19,17 @@ Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimelt�
 
 ####Gogs-palvelun asennus Päätteen avulla
 
-		Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää
-		Päätteeseen järjestyksessään yksi kerrallaan ja jokaisen komennon jälkeen tulee
-		painaa Enter-painiketta.
+Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää
+
+Päätteeseen järjestyksessään yksi kerrallaan ja jokaisen komennon jälkeen tulee
+painaa Enter-painiketta.
 		
 1. sudo apt-get -y update && sudo apt-get -y upgrade
 
 (Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
 
 Komennon tulisi antaa seuraavanlainen tuloste:
+
 Tehdään asetuksia: xinit (1.3.4-3ubuntu0.1) ...
 Tehdään asetuksia: oxideqt-codecs:amd64 (1.14.7-0ubuntu1) ...
 Tehdään asetuksia: liboxideqtcore0:amd64 (1.14.7-0ubuntu1) ...
@@ -49,149 +51,61 @@ git --version
 komennon tulisi antaa seuraavanlainen tuloste:
 git version 2.7.4
 
-		4. seuraavaksi ladataan Gogs-palvelun asennuspaketti alla olevan linkin takaa.
+4. seuraavaksi ladataan Gogs-palvelun asennuspaketti alla olevan linkin takaa.
 Ladattu tiedosto tallentuu hakemistoon nimeltään Lataukset, josta se siirretään hakemistoon nimeltään Koti.
 
 https://dl.gogs.io/gogs_v0.9.13_linux_amd64.tar.gz
 
-  5. seuraavaksi klikataan pakettia kotihakemistossa hiiren kakkospainikkeella ja avataan se sovelluksella
-		Pakettienkäsittely. Sen jälkeen klikataan sovelluksessa Pura-painiketta, siirrytään seuraavassa ikkunassa kotihakemistoon ja klikataan lopuksi näyttöruudun oikeassa alakulmassa näkyvää Pura-painiketta. Kun kotikansiossa on oranssi alikansio nimeltään Gogs, purkaminen on onnistunut.
+5. Seuraavaksi klikataan pakettia kotihakemistossa hiiren kakkospainikkeella ja avataan se sovelluksella Pakettienkäsittely. Sen jälkeen klikataan sovelluksessa Pura-painiketta, siirrytään seuraavassa ikkunassa kotihakemistoon ja klikataan lopuksi näyttöruudun oikeassa alakulmassa näkyvää Pura-painiketta. Kun kotikansiossa on oranssi alikansio nimeltään Gogs, purkaminen on onnistunut.
 
-6. seuraavaksi siirrytään takaisin Päätteeseen ja asennetaan siinä mysql-tietokantapalvelin seuraavalla komennolla: 
-				sudo apt-get -y install mysql-server
+6. Seuraavaksi siirrytään takaisin Päätteeseen ja asennetaan siinä mysql-tietokantapalvelin seuraavalla komennolla:
+
+sudo apt-get -y install mysql-server
 
 asennuksen yhteydessä järjestelmä pyytää määrittämään uuden salasanan tietokannan pääkäyttäjälle nimeltään root. Määritellään sille asennusikkunassa kahdesti seuraava salasana: data
 
-				Kun Pääte antaa seuraavanlaisen tulosteen:
+Kun Pääte antaa seuraavanlaisen tulosteen:
 
-		Tehdään asetuksia: libhtml-template-perl (2.95-2) ...
-		Tehdään asetuksia: mysql-server (5.7.12-0ubuntu1) ...
-		Processing triggers for libc-bin (2.23-0ubuntu3) ...
-		Processing triggers for ureadahead (0.100.0-19) ...
-		Processing triggers for systemd (229-4ubuntu4) …
+Tehdään asetuksia: libhtml-template-perl (2.95-2) ...
+Tehdään asetuksia: mysql-server (5.7.12-0ubuntu1) ...
+Processing triggers for libc-bin (2.23-0ubuntu3) ...
+Processing triggers for ureadahead (0.100.0-19) ...
+Processing triggers for systemd (229-4ubuntu4) …
 
 
-		tietokanta on onnistuneesti asennettu.
+tietokanta on onnistuneesti asennettu.
 		
- 		7. seuraavaksi tarkistetaan mysql-tietokannan versio seuraavalla komennolla:
+7. seuraavaksi tarkistetaan mysql-tietokannan versio seuraavalla komennolla:
 
- 		mysql -- version
+ mysql --version
  		
- 		komennon tulisi antaa seuraavanlainen tuloste:
+ komennon tulisi antaa seuraavanlainen tuloste:
 
-		 mysql  Ver 14.14 Distrib 5.7.12, for Linux (x86_64) using  EditLine wrapper
+mysql  Ver 14.14 Distrib 5.7.12, for Linux (x86_64) using  EditLine wrapper
 
- 		8. seuraavaksi tarkistetaan tietokannan tila seuraavalla komennolla:
-		sudo systemctl status mysql
+ 8. seuraavaksi tarkistetaan tietokannan tila seuraavalla komennolla:
+sudo systemctl status mysql
 
-		komennon tulisi antaa seuraavanlainen tuloste:
-
-						
+komennon tulisi antaa seuraavanlainen tuloste:
 
 
 
 
-		9. seuraavaksi siirrytään seuraavaan hakemistoon:
+
+9. seuraavaksi siirrytään seuraavaan hakemistoon:
 		/home/git/gogs 
-		Se tapahtuu seuraavalla komennolla:
- 		cd /home/git/gogs
-
- 		komennon tulisi antaa seuraavanlainen tuloste:
-
-		 git@git-Lenovo-B50-45:~/gogs$ 
-
-
-
-
-
-
-
-		10. seuraavaksi käynnistetään Gogs-palvelu seuraavalla komennolla:
-
-		./gogs web
-				komennon tulisi antaa seuraavanlainen tuloste:
-
-
-
-
-
-
-
-
-
-
-
-
-	Tässä vaiheessa jätetään Pääte auki taustalle ja siirrytään käyttämään Firefox-			selainta. Seuraavilla sivuilla on tarkemmat ohjeet jatkotoimenpiteistä.
-
-
-
-
-
-
-
-
-
-		11. seuraavaksi avataan Firefox-selain ja siirrytään sillä seuraavaan osoitteeseen: 
-
-		http://localhost:3000/install
-
-		tämän jälkeen selainikkunassa tulisi näkyä seuraavanlainen näkymä:
-
-						
-
-
-				
-
 		
+Se tapahtuu seuraavalla komennolla:
+cd /home/git/gogs
 
-		kun yllä kuvattu Gogs-palvelun asennusikkuna on saatu avattua Firefox-selaimessa, 		jätetään se taustalle ja avataan uusi Pääte-ikkuna Ubuntun Unity-valikon kautta. 			Tässä vaiheessa näyttöruudulla tulisi olla seuraavanlainen näkymä:
+komennon tulisi antaa seuraavanlainen tuloste:
+ git@git-Lenovo-B50-45:~/gogs$ 
 
-										
+10. seuraavaksi käynnistetään Gogs-palvelu seuraavalla komennolla:
 
+./gogs web
 
-
-
-		12. seuraavaksi varmistetaan, että Gogs-palvelu on edelleen käynnissä 				ensimmäisessä Pääte-ikkunassa ja sen jälkeen siirrytään äsken avatussa tyhjässä 			Pääte-ikkunassa seuraavaan hakemistoon: /home/git/gogs
-
-		Se tapahtuu seuraavalla komennolla:
-
-		cd /home/git/gogs
-
-		13. seuraavaksi annetaan kaikille käyttäjille suoritusoikeudet seuraavaan tiedostoon: 		scripts/mysql.sql
-
-		Se tapahtuu seuraavalla komennolla:
-
-		sudo chmod +x scripts/mysql.sql
-		
-
-		yllä mainittujen komentojen syöttämisen jälkeen Päätteessä tulisi olla 				seuraavanlainen näkymä:
-
-				
-
-
-
-
-						
-
-
-
-
-
-		14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.  Se 		tapahtuu seuraavalla komennolla:
-
-		mysql --user=root --password=data < scripts/mysql.sql
-
-		komennon tulisi antaa seuraavanlainen tuloste:
-
-		mysql: [Warning] Using a password on the command line interface can be insecure.
-
-		Yllä olevasta varoituksesta ei tarvitse välittää. Mikäli muita varoituksia ei komennon 		syöttämisen jälkeen tullut, tietokannan luonti onnistui.
-
-		15. Seuraavaksi siirrytään takaisin Firefox-selaimessa olevaan Gogs-palvelun 			asennusikkunaan ja kirjoitetaan siinä näkyvään Password-laatikkoon seuraava 			salasana:
-
-		data
-		16. Lopuksi siirrytään hiirellä asennusikkunan alareunaan ja klikataan siellä olevaa 		Install Gogs -painiketta.
+komennon tulisi antaa seuraavanlainen tuloste:
 
 
 
@@ -202,75 +116,91 @@ asennuksen yhteydessä järjestelmä pyytää määrittämään uuden salasanan 
 
 
 
+
+Tässä vaiheessa jätetään Pääte auki taustalle ja siirrytään käyttämään Firefox-			selainta. Seuraavilla sivuilla on tarkemmat ohjeet jatkotoimenpiteistä.
+
+11. seuraavaksi avataan Firefox-selain ja siirrytään sillä seuraavaan osoitteeseen: 
+
+http://localhost:3000/install
+tämän jälkeen selainikkunassa tulisi näkyä seuraavanlainen näkymä:
+
+
+
+
+kun yllä kuvattu Gogs-palvelun asennusikkuna on saatu avattua Firefox-selaimessa, 		jätetään se taustalle ja avataan uusi Pääte-ikkuna Ubuntun Unity-valikon kautta.
+Tässä vaiheessa näyttöruudulla tulisi olla seuraavanlainen näkymä:
+
+12. seuraavaksi varmistetaan, että Gogs-palvelu on edelleen käynnissä 				ensimmäisessä Pääte-ikkunassa ja sen jälkeen siirrytään äsken avatussa tyhjässä Pääte-ikkunassa 
+seuraavaan hakemistoon: 
+
+/home/git/gogs
+Se tapahtuu seuraavalla komennolla:
+
+cd /home/git/gogs
+
+13. seuraavaksi annetaan kaikille käyttäjille suoritusoikeudet seuraavaan tiedostoon: 		scripts/mysql.sql
+Se tapahtuu seuraavalla komennolla:
+sudo chmod +x scripts/mysql.sql
+yllä mainittujen komentojen syöttämisen jälkeen Päätteessä tulisi olla 				seuraavanlainen näkymä:
+
+
+
+
+
+
+
+14. seuraavaksi luodaan tietokanta aiemmin asennetulle tietokantapalvelimelle.  Se 		tapahtuu seuraavalla komennolla:
+
+mysql --user=root --password=data < scripts/mysql.sql
+
+komennon tulisi antaa seuraavanlainen tuloste:
+
+mysql: [Warning] Using a password on the command line interface can be insecure.
+
+Yllä olevasta varoituksesta ei tarvitse välittää. Mikäli muita varoituksia ei komennon 		syöttämisen jälkeen tullut, tietokannan luonti onnistui.
+
+15. Seuraavaksi siirrytään takaisin Firefox-selaimessa olevaan Gogs-palvelun 			asennusikkunaan ja kirjoitetaan siinä näkyvään Password-laatikkoon seuraava 			salasana:
+
+data
+
+16. Lopuksi siirrytään hiirellä asennusikkunan alareunaan ja klikataan siellä olevaa 		Install Gogs -painiketta.
 
 
 
 Gogs-palvelun käyttöönotto
-		Asennuksen jälkeen palveluun pitää rekisteröityä. Se tapahtuu klikkaamalla Login-		ikkunassa seuraavaa linkkiä: Sign up now.
 
-		
+Asennuksen jälkeen palveluun pitää rekisteröityä. Se tapahtuu klikkaamalla Login-		ikkunassa seuraavaa linkkiä: Sign up now.
 
-	
 
-		
-
-		
-
-		
 
 
 
 Tämän jälkeen syötetään omat tiedot seuraavassa ikkunassa oleviin laatikoihin alla olevan kuvan mukaisesti ja klikataan lopuksi Create an account -painiketta. Lopuksi äsken luoduilla tunnuksilla kirjaudutaan palveluun seuraavassa ikkunassa. Kirjautumisen jälkeen näyttöruudulla tulisi olla kuvan 3 mukainen näkymä.
 
-
-
--
-
-
-
-
-
-
-
 Sisällön luominen Gogs-palveluun
-		Gogs-palvelun käyttöliittymässä on mahdollista luoda seuraavia 					sisältökomponentteja:
 
-		1. tietovarastot (repositories) → Gogs:in sisälle rakennettavia tietovarastoja 			voidaan verrata Linux-käyttöjärjestelmän hakemistoihin. Jokaiseen yksittäiseen 			asiaan liittyvä tieto on koottu yhteen tietovarastoon samalla tavoin kuin Linuxissa 		kaikki käyttäjän henkilökohtaiset tiedostot on koottu sen kotihakemistoon. 
+Gogs-palvelun käyttöliittymässä on mahdollista luoda seuraavia sisältökomponentteja:
 
-		2. tietojen kopioiminen tai siirtäminen toisesta julkaisualustasta Gogs-palveluun 			(Migration) → toisesta julkaisualustasta on mahdollista siirtää tai kopioida tietoja 		Gogs:iin. Jos sama käyttäjä käyttää esimerkiksi sekä Github- että Gogs-				palveluita, Github:in tiedot voidaan kopioida Gogs:iin Migraatio-toiminnon avulla.
+1. tietovarastot (repositories) → Gogs:in sisälle rakennettavia tietovarastoja voidaan verrata Linux-käyttöjärjestelmän hakemistoihin. Jokaiseen yksittäiseen asiaan liittyvä tieto on koottu yhteen tietovarastoon samalla tavoin kuin Linuxissa kaikki käyttäjän henkilökohtaiset tiedostot on koottu sen kotihakemistoon. 
 
-		3. organisaatiot → organisaatiot ovat Gogs:in sisälle luotavia hallinnollisia 			toimielimiä, joille voidaan luoda omia tietovarastoja. Niitä voidaan verrata Windows 		Server -palvelinkäyttöjärjestelmässä esiintyviin organisaatioyksiköihin. Organisaatiot 		voidaan luokitella ja nimetä niiden tehtävän tai hallinnollisen aseman mukaan ja 			niihin on mahdollista lisätä ja poistaa jäseniä. Myös organisaatioiden oikeuksia 			voidaan muuttaa niiden tehtävän ja hallinnollisen aseman mukaan. 
+2. tietojen kopioiminen tai siirtäminen toisesta julkaisualustasta Gogs-palveluun (Migration) → toisesta julkaisualustasta on mahdollista siirtää tai kopioida tietoja 		Gogs:iin. Jos sama käyttäjä käyttää esimerkiksi sekä Github- että Gogs-				palveluita, Github:in tiedot voidaan kopioida Gogs:iin Migraatio-toiminnon avulla.
 
-
-
-
-
-
-
-
-
-
-
+3. organisaatiot → organisaatiot ovat Gogs:in sisälle luotavia hallinnollisia toimielimiä, joille voidaan luoda omia tietovarastoja. Niitä voidaan verrata Windows Server -palvelinkäyttöjärjestelmässä esiintyviin organisaatioyksiköihin. Organisaatiot 		voidaan luokitella ja nimetä niiden tehtävän tai hallinnollisen aseman mukaan ja niihin on mahdollista lisätä ja poistaa jäseniä. Myös organisaatioiden oikeuksia voidaan muuttaa niiden tehtävän ja hallinnollisen aseman mukaan. 
 
 
 
 
 
 Tietovaraston luominen
-		Tietovaraston luominen tapahtuu klikkaamalla Dashboard-näkymässä näyttöruudun 		oikeassa yläkulmassa olevaa +-merkkiä ja valitsemalla New repository.
+
+Tietovaraston luominen tapahtuu klikkaamalla Dashboard-näkymässä näyttöruudun oikeassa yläkulmassa olevaa +-merkkiä ja valitsemalla New repository.
+
+Luodaan tietovarasto nimeltään Esimerkkivarasto ja säädetään sen asetukset alla olevan mallikuvan mukaisiksi. Language-laatikon arvoksi kannattaa aina asettaa Go ja License-laatikon arvoksi GNU General Public License v3.0. Lopuksi klikataan Create repository -painiketta.
+
+Koska esimerkkivarastoa tullaan käyttämään pohjana myöhemmin luotaville varastoille, sen kohdalla rastitetaan seuraava valintaikkuna: Initialize this repository
 
 
-
-			Luodaan tietovarasto nimeltään Esimerkkivarasto ja säädetään sen asetukset alla 			olevan mallikuvan mukaisiksi. Language-laatikon arvoksi kannattaa aina asettaa Go 		ja License-laatikon arvoksi GNU General Public License v3.0. Lopuksi klikataan 		Create repository -painiketta.
-
-						
-
-
-
-		
-
-		Koska esimerkkivarastoa tullaan käyttämään pohjana myöhemmin 				luotaville varastoille, sen kohdalla rastitetaan seuraava valintaikkuna: Initialize this 		repository
-		Tietovaraston luomisen jälkeen näyttöruudulla tulisi näkyä kuvan 3 mukainen 			näkymä. Siitä voidaan päätellä, että kyseiseen tietovarastoon on varastoitu kaikki 		siihen liittyvä tieto.
+Tietovaraston luomisen jälkeen näyttöruudulla tulisi näkyä kuvan 3 mukainennäkymä. Siitä voidaan päätellä, että kyseiseen tietovarastoon on varastoitu kaikki siihen liittyvä tieto.
 
 
 
