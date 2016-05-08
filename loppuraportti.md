@@ -17,7 +17,7 @@ Ennen Gogs-palvelun asentamista ja käyttöönottoa asennetaan Linux Ubuntu 16.0
 
 Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimeltään Pääte. Se tapahtuu klikkaamalla järjestelmän oikeassa reunassa näkyvän pystypalkin ylintä kuvaketta ja kirjoittamalla avautuvaan hakukenttään seuraava termi: Pääte. Tämän jälkeen kirjoitetaan avautuvaan ikkunaan alla listatut komennot järjestyksessään yksi kerrallaan. Jokaisen komennon kirjoittamisen jälkeen suoritetaan se painamalla Enter-painiketta. Jos järjestelmä kysyy lupaa jollekin toimenpiteelle, annetaan lupa painamalla K-kirjainta.
 
-###Päätteseen syötettävät komennot
+###Gogs-palvelun asennus Päätteessä
 
 Alla on lista komennoista, joiden avulla Gogs saadaan toimimaan. Ne tulee syöttää Päätteeseen **yksi kerrallaan** ja jokaisen komennon jälkeen tulee painaa **Enter**-painiketta.
 
