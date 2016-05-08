@@ -25,7 +25,7 @@ painaa Enter-painiketta.
 
 1. sudo apt-get -y update && sudo apt-get -y upgrade
 
-###(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmänasennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
+###(Huomio! Tässä vaiheessa järjestelmä kysyy Ubuntu 16.04 -käyttöjärjestelmän asennuksen yhteydessä määriteltyä pääkäyttäjän salasanaa. Ennen kuin komento voidaan suorittaa, se täytyy syöttää sille varattuun kenttään ja painaa sen jälkeen lopuksi Enter-painiketta. Yllä mainitun komennon avullapäivitetään Ubuntun pakettivarastot ja asennetaan järjestelmään saatavilla olevat päivitykset)
 
 Komennon tulisi antaa seuraavanlainen tuloste:
 
