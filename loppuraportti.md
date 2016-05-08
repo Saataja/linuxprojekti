@@ -17,17 +17,11 @@ Ennen Gogs-palvelun asentamista ja käyttöönottoa asennetaan Linux Ubuntu 16.0
 
 Asennuksen jälkeen avataan järjestelmän Unity-valikon kautta työkalu nimeltään Pääte. Se tapahtuu klikkaamalla järjestelmän oikeassa reunassa näkyvän pystypalkin ylintä kuvaketta ja kirjoittamalla avautuvaan hakukenttään seuraava termi: Pääte. Tämän jälkeen kirjoitetaan avautuvaan ikkunaan alla listatut komennot yksi kerrallaan. Jokaisen komennon kirjoittamisen jälkeen suoritetaan se painamalla Enter-painiketta. Jos järjestelmä kysyy lupaa jollekin toimenpiteelle, annetaan lupa painamalla K-kirjainta.
 
-sudo apt-get update
+päättessen syötettävä komento                   Sen selite
+          
+sudo apt-get update                             Päivittää
 
 sudo apt-get -y install git
 
 sudo apt-get -y install mysql-server
-
-#TROLOLOL
-
-
-
-
-
-
 
